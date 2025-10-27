@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьный театр | Главная</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навбар -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand golden-text" href="#">Светлячки</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link golden-text" href="#main-content">В начало</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle golden-text" href="#" role="button" data-bs-toggle="dropdown">
+                            Документы
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item golden-text" href="docs/ustav.pdf" download>приказ о создании школьного театра</a></li>
+                            <li><a class="dropdown-item golden-text" href="docs/raspisanie.pdf" download>сертификат</a></li>
+                            <li><a class="dropdown-item golden-text" href="docs/polozhenie.pdf" download>положение</a></li>
+                            <li><a class="dropdown-item golden-text" href="docs/polozhenie.pdf" download>список</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <header id="main-content" class="hero-section vh-100 d-flex align-items-center justify-content-center">
+        <div class="hero-content text-center text-white">
+            <h1 class="display-1 fw-bold golden-text" data-aos="fade-down">Добро пожаловать в наш театр!</h1>
+            <p class="lead my-4" data-aos="fade-up" data-aos-delay="200">Место, где рождаются таланты и оживают мечты.</p>
+            <a href="#about" class="btn golden-btn btn-lg mt-3" data-aos="zoom-in" data-aos-delay="400">Подробнее</a>
+        </div>
+    </header>
+
+    <!-- Секция с преподавателями -->
+    <section id="teachers" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 golden-text" data-aos="fade-up">Наши руководители</h2>
+            <div class="row g-4">
+                <!-- Карточка 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="teacher-card">
+                        <!-- ЗАМЕНИТЕ teacher1.jpg на ваше фото -->
+                        <img src="image/tch1.jpg" class="card-img-top" alt="Преподаватель 1">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Хаустова Ольга Германовна</h5>
+                            <p class="card-text">Руководитель, педагог дополнительного образования</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="teacher-card">
+                        <!-- ЗАМЕНИТЕ teacher2.jpg на ваше фото -->
+                        <img src="image/tch2.jpg" class="card-img-top" alt="Преподаватель 2">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Капытова Наталья Владимировна</h5>
+                            <p class="card-text">Режиссёр, учитель начальных классов</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="teacher-card">
+                        <!-- ЗАМЕНИТЕ teacher3.jpg на ваше фото -->
+                        <img src="image/tch3.jpg" class="card-img-top" alt="Преподаватель 3">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Кульшина Дарья Александровна</h5>
+                            <p class="card-text">Режиссёр, учитель музыки</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция в шахматном порядке -->
+    <section id="about" class="py-5">
+        <h2 class="text-center mb-5 golden-text" data-aos="fade-up">История театра</h2>
+        <div class="container">
+            <!-- Блок 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6" data-aos="fade-up-right">
+                    <img src="image/2013.jpg" alt="Наша постановка 1" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-up-left">
+                    <h3 class="golden-text">Начало</h3>
+                    <p>Учитель начальных классов Капытова Наталья Владимировна и педагог дополнительного образования Хаустова Ольга Германовна организовали театральную-студию  Светлячки. 
+Дети 2006 года рождения с огромным удовольствием погрузились в работу. 
+1 спектакль вышел Кошкин дом, на следующий год Бременские музыканты, Дюймовочка на английском языке, Рождественская сказка, Военно- патриотические программы</p>
+                </div>
+            </div>
+            <!-- Блок 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2" data-aos="fade-up-left">
+                    <img src="image/2017.jpg" alt="Наша постановка 2" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-up-right">
+                    <h3 class="golden-text">Новая группа</h3>
+                    <p>В 2017 году когда артисты перешли в 5 класс и продолжили работать над новыми программами, в 1б класс пришли артисты 2010 гр. Первой сказкой которая вышла это " Волк и семеро козлят", затем " 12 месяцев ", Снежная королева, Щелкунчик. Так же каждый год к 8 марта готовили праздничные программы для мам: Ложкари, Мушкитеры, Шляпная вечеринка. Затем подошли к серьёзной программе Шукшинские чтения. Очень увлекла военно- патриотическая тема. Бессмертный полк, Письма с фронта.</p>
+                </div>
+            </div>
+            <!-- Блок 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6" data-aos="fade-up-right">
+                    <img src="image/2021.jpg" alt="Наша постановка 3" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6" data-aos="fade-up-left">
+                    <h3 class="golden-text">Шукшинские! Перед военными!</h3>
+                    <p>В 2021 г к Натальи Владимировне пришло другое поколение артистов театральной студии Светлички и подключились к работе. 
+В 1же год у них вышел спектакль Кошкин дом, затем Муха Цокатуха, королевство краевых зеркал, 12 месяцев. Начанали и заканчивали учебный год праздничными программами: Оранжевое лето, Парад кепок или с днём учителя, Фестиваль шляпок, Осенний блюз, Лето!</p>
+                </div>
+            </div>
+            <!-- Блок 4 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2" data-aos="fade-up-left">
+                    <img src="image/2025.jpg" alt="Наша постановка 4" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1" data-aos="fade-up-right">
+                    <h3 class="golden-text">"Снежная королева"</h3>
+                    <p>В настоящее время 2025 году для нового 1«Б» класса и их учителя Натальи Владимировны Копытовой начинается яркая история. Их путешествие стартует в театра-студии «Светлячки» — месте, где рождаются мечты, учатся дружить и верить в себя.
+Вместе с мудрым наставником и режиссером ребята сделают первый шаг в волшебный мир театра. Пусть их дружный класс, словно огоньки-светлячки, озарит сцену радостью первых открытий и громких оваций!
+Добро пожаловать, юные «Светлячки»! Вас ждут великие роли — и на сцене, и в жизни!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бесконечная лента с фотографиями -->
+    <section class="py-5 gallery-strip-section">
+        <h2 class="text-center mb-5 golden-text" data-aos="fade-up">Яркие моменты</h2>
+        <div class="gallery-strip">
+            <div class="gallery-track">
+                <!-- Дублируем набор изображений для бесшовной цикличности -->
+                <!-- ЗАМЕНИТЕ gallery1-5.jpg на ваши фото -->
+                <img src="assets/gallery1.jpg" alt="Галерея 1">
+                <img src="assets/gallery2.jpg" alt="Галерея 2">
+                <img src="assets/gallery3.jpg" alt="Галерея 3">
+                <img src="assets/gallery4.jpg" alt="Галерея 4">
+                <img src="assets/gallery5.jpg" alt="Галерея 5">
+                <img src="assets/gallery6.jpg" alt="Галерея 6">
+                <img src="assets/gallery7.jpg" alt="Галерея 7">
+                <!-- Дубликаты для бесшовности -->
+                <img src="assets/gallery1.jpg" alt="Галерея 1">
+                <img src="assets/gallery2.jpg" alt="Галерея 2">
+                <img src="assets/gallery3.jpg" alt="Галерея 3">
+                <img src="assets/gallery4.jpg" alt="Галерея 4">
+                <img src="assets/gallery5.jpg" alt="Галерея 5">
+                <img src="assets/gallery6.jpg" alt="Галерея 6">
+                <img src="assets/gallery7.jpg" alt="Галерея 7">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center py-4">
+        <p class="golden-text mb-0">&copy; Школьный театр "Светлячки"</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

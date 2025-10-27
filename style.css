@@ -1,0 +1,165 @@
+/* Кастомные CSS-переменные для цветов */
+:root {
+    --dark-red: #8B0000;
+    --dark-red-gradient: linear-gradient(135deg, #6a0c0c, #8B0000);
+    --gold: #FFD700;
+    --gold-gradient: linear-gradient(135deg, #daa520, #FFD700, #ffec8b);
+    --light-gold: #FFF8DC;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--dark-red-gradient);
+    color: white;
+    overflow-x: hidden;
+}
+
+.golden-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.custom-navbar {
+    background: rgba(139, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.custom-dropdown {
+    background: var(--dark-red);
+    border: 1px solid var(--gold);
+}
+
+.dropdown-item {
+    color: var(--light-gold) !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+.hero-section {
+    background: url('image/background.png') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.golden-btn {
+    background: var(--gold-gradient);
+    color: var(--dark-red);
+    border: none;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.golden-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    color: var(--dark-red);
+}
+
+.teacher-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    height: 400px;
+}
+
+.teacher-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.teacher-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(139, 0, 0, 0.85);
+    color: var(--light-gold);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.teacher-card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+#about .row {
+    margin-bottom: 100px;
+}
+
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-strip-section {
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-track {
+    display: flex;
+    animation: scroll-horizontal 30s linear infinite;
+    width: max-content;
+}
+
+.gallery-track img {
+    height: 400px;
+    width: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes scroll-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+    #about .row .col-md-6 {
+        margin-bottom: 2rem;
+    }
+    .gallery-track img {
+        height: 180px;
+    }
+}
