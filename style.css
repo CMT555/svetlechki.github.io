@@ -134,7 +134,7 @@ body {
 
 .gallery-track {
     display: flex;
-    animation: scroll-horizontal 30s linear infinite;
+    animation: scroll-horizontal 45s linear infinite;
     width: max-content;
 }
 
