@@ -11,35 +11,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Навбар -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand golden-text" href="#">Светлячки</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link golden-text" href="#main-content">В начало</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle golden-text" href="#" role="button" data-bs-toggle="dropdown">
-                            Документы
-                        </a>
-                        <ul class="dropdown-menu custom-dropdown">
-                            <li><a class="dropdown-item golden-text" href="files/prikaz.pdf" target="_blank">Приказ о создании школьного театра</a></li>
-                            <li><a class="dropdown-item golden-text" href="files/sertifikat.pdf" target="_blank">Сертификат</a></li>
-                            <li><a class="dropdown-item golden-text" href="files/firstdoc.pdf" target="_blank">Положение</a></li>
-                            <li><a class="dropdown-item golden-text" href="files/obrazsovie.pdf" target="_blank">Приказ о присвоение звания</a></li>
-                            <li><a class="dropdown-item golden-text" href="files/obrazsovie.pdf" target="_blank">Список Участников</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center w-100">
+                <!-- Логотип и название -->
+                <a class="navbar-brand golden-text me-4" href="#main-content">Светлячки</a>
+                
+                <!-- Кнопка для мобильных -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link golden-text" href="#main-content">В начало</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle golden-text" href="#" role="button" data-bs-toggle="dropdown">
+                                Документы
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown">
+                                <li><a class="dropdown-item golden-text" href="files/prikaz.pdf" target="_blank">Приказ о создании школьного театра</a></li>
+                                <li><a class="dropdown-item golden-text" href="files/sertifikat.pdf" target="_blank">Сертификат</a></li>
+                                <li><a class="dropdown-item golden-text" href="files/firstdoc.pdf" target="_blank">Положение</a></li>
+                                <li><a class="dropdown-item golden-text" href="files/obrazsovie.pdf" target="_blank">Приказ о присвоение звания</a></li>
+                                <li><a class="dropdown-item golden-text" href="files/obrazsovie.pdf" target="_blank">Список Участников</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
-
+    
     <!-- Главный экран -->
     <header id="main-content" class="hero-section vh-100 d-flex align-items-center justify-content-center">
         <div class="hero-content text-center text-white">
@@ -51,6 +59,7 @@
 
     <!-- Секция с преподавателями -->
     <section id="teachers" class="py-5">
+
         <div class="container">
             <h2 class="text-center mb-5 golden-text" data-aos="fade-up">Наши руководители</h2>
             <div class="row g-4">
@@ -62,6 +71,7 @@
                         <div class="card-overlay">
                             <h5 class="card-title">Хаустова Ольга Германовна</h5>
                             <p class="card-text">Руководитель, педагог дополнительного образования</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -92,56 +102,79 @@
     </section>
 
     <!-- Секция в шахматном порядке -->
-    <section id="about" class="py-5">
-        <h2 class="text-center mb-5 golden-text" data-aos="fade-up">История театра</h2>
-        <div class="container">
-            <!-- Блок 1 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6" data-aos="fade-up-right">
-                    <img src="image/2013.jpg" alt="Наша постановка 1" class="img-fluid rounded shadow">
+  <section id="about" class="py-5">
+    <h2 class="text-center mb-5 golden-text" data-aos="fade-up">История театра</h2>
+    
+    <!-- Золотая лента -->
+    <div class="golden-timeline"></div>
+    
+    <div class="container">
+        <!-- Блок 1 -->
+        <div class="row align-items-center mb-5 history-block">
+            <div class="col-md-6" data-aos="fade-up-right">
+                <div class="photo-connector left">
+                    <img src="image/2013.jpg" alt="Наша постановка 1" class="img-fluid rounded shadow golden-frame">
                 </div>
-                <div class="col-md-6" data-aos="fade-up-left">
+            </div>
+            <div class="col-md-6" data-aos="fade-up-left">
+                <div class="history-content">
                     <h3 class="golden-text">Начало. Выпуск 2024</h3>
-                    <p>Учитель начальных классов Копытова Наталья Владимировна и педагог дополнительного образования Хаустова Ольга Германовна организовали театральную-студию  "Светлячки". 
-Дети 2006 года рождения с огромным удовольствием погрузились в работу. 
-Первый спектакль вышел "Кошкин дом", на следующий год "Бременские музыканты", "Дюймовочка" на английском языке, "Рождественская сказка", Военно- патриотические программы</p>
-                </div>
-            </div>
-            <!-- Блок 2 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6 order-md-2" data-aos="fade-up-left">
-                    <img src="image/2017.jpg" alt="Наша постановка 2" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 order-md-1" data-aos="fade-up-right">
-                    <h3 class="golden-text">Старшая группа 9Б</h3>
-                    <p>В 2017 году когда артисты перешли в 5 класс и продолжили работать над новыми программами, в 1б класс пришли артисты 2010 гр. Первой сказкой которая вышла это "Волк и семеро козлят", затем "12 месяцев", "Снежная королева", "Щелкунчик". Так же каждый год к 8 марта готовили праздничные программы для мам: "Ложкари", "Мушкитеры", "Шляпная вечеринка". Затем подошли к серьёзной программе "Шукшинские чтения". Очень увлекла военно- патриотическая тема. "Бессмертный полк", "Письма с фронта".</p>
-                </div>
-            </div>
-            <!-- Блок 3 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6" data-aos="fade-up-right">
-                    <img src="image/2021.jpg" alt="Наша постановка 3" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6" data-aos="fade-up-left">
-                    <h3 class="golden-text">Средняя группа 5Б</h3>
-                    <p>В 2021 г к Натальи Владимировне пришло другое поколение артистов театральной студии "Светлички" и подключились к работе. 
-В первом же году у них вышел спектакль "Кошкин дом", затем "Муха Цокатуха", "Королевство краевых зеркал", "12 месяцев". Начанали и заканчивали учебный год праздничными программами: "Оранжевое лето", "Парад кепок или с днём учителя", "Фестиваль шляпок", "Осенний блюз", "Лето!"</p>
-                </div>
-            </div>
-            <!-- Блок 4 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6 order-md-2" data-aos="fade-up-left">
-                    <img src="image/2025.jpg" alt="Наша постановка 4" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6 order-md-1" data-aos="fade-up-right">
-                    <h3 class="golden-text">Младшая группа 1Б</h3>
-                    <p>В настоящее время 2025 году для нового 1«Б» класса и их учителя Натальи Владимировны Копытовой начинается яркая история. Их путешествие стартует в театра-студии «Светлячки» — месте, где рождаются мечты, учатся дружить и верить в себя.
-Вместе с мудрым наставником и режиссером ребята сделают первый шаг в волшебный мир театра. Пусть их дружный класс, словно огоньки-светлячки, озарит сцену радостью первых открытий и громких оваций!
-Добро пожаловать, юные «Светлячки»! Вас ждут великие роли — и на сцене, и в жизни!</p>
+                    <p>Учитель начальных классов Копытова Наталья Владимировна и педагог дополнительного образования Хаустова Ольга Германовна организовали театральную-студию "Светлячки". 
+                    Дети 2006 года рождения с огромным удовольствием погрузились в работу. 
+                    Первый спектакль вышел "Кошкин дом", на следующий год "Бременские музыканты", "Дюймовочка" на английском языке, "Рождественская сказка", Военно-патриотические программы</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Блок 2 -->
+        <div class="row align-items-center mb-5 history-block">
+            <div class="col-md-6 order-md-2" data-aos="fade-up-left">
+                <div class="photo-connector right">
+                    <img src="image/2017.jpg" alt="Наша постановка 2" class="img-fluid rounded shadow golden-frame">
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1" data-aos="fade-up-right">
+                <div class="history-content">
+                    <h3 class="golden-text">Старшая группа 9Б</h3>
+                    <p>В 2017 году когда артисты перешли в 5 класс и продолжили работать над новыми программами, в 1б класс пришли артисты 2010 гр. Первой сказкой которая вышла это "Волк и семеро козлят", затем "12 месяцев", "Снежная королева", "Щелкунчик". Так же каждый год к 8 марта готовили праздничные программы для мам: "Ложкари", "Мушкитеры", "Шляпная вечеринка". Затем подошли к серьёзной программе "Шукшинские чтения". Очень увлекла военно-патриотическая тема. "Бессмертный полк", "Письма с фронта".</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Блок 3 -->
+        <div class="row align-items-center mb-5 history-block">
+            <div class="col-md-6" data-aos="fade-up-right">
+                <div class="photo-connector left">
+                    <img src="image/2021.jpg" alt="Наша постановка 3" class="img-fluid rounded shadow golden-frame">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up-left">
+                <div class="history-content">
+                    <h3 class="golden-text">Средняя группа 5Б</h3>
+                    <p>В 2021 г к Натальи Владимировне пришло другое поколение артистов театральной студии "Светлички" и подключились к работе. 
+                    В первом же году у них вышел спектакль "Кошкин дом", затем "Муха Цокатуха", "Королевство краевых зеркал", "12 месяцев". Начинанали и заканчивали учебный год праздничными программами: "Оранжевое лето", "Парад кепок или с днём учителя", "Фестиваль шляпок", "Осенний блюз", "Лето!"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Блок 4 -->
+        <div class="row align-items-center mb-5 history-block">
+            <div class="col-md-6 order-md-2" data-aos="fade-up-left">
+                <div class="photo-connector right">
+                    <img src="image/2025.jpg" alt="Наша постановка 4" class="img-fluid rounded shadow golden-frame">
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1" data-aos="fade-up-right">
+                <div class="history-content">
+                    <h3 class="golden-text">Младшая группа 1Б</h3>
+                    <p>В настоящее время 2025 году для нового 1«Б» класса и их учителя Натальи Владимировны Копытовой начинается яркая история. Их путешествие стартует в театра-студии «Светлячки» — месте, где рождаются мечты, учатся дружить и верить в себя.
+                    Вместе с мудрым наставником и режиссером ребята сделают первый шаг в волшебный мир театра. Пусть их дружный класс, словно огоньки-светлячки, озарит сцену радостью первых открытий и громких оваций!
+                    Добро пожаловать, юные «Светлячки»! Вас ждут великие роли — и на сцене, и в жизни!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Бесконечная лента с фотографиями -->
     <section class="py-5 gallery-strip-section">
@@ -185,6 +218,20 @@
             </div>
         </div>
     </section>
+
+    <section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 golden-text">Визитная карточка театра</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-6">
+                <div class="video-container">
+                    <iframe width="720" height="405" src="https://rutube.ru/play/embed/182f7daa7906c63d83548f5fe388b8b2/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer class="bg-dark text-center py-4">
         <p class="golden-text mb-0">&copy; Школьный театр "Светлячки"</p>

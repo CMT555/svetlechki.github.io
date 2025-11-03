@@ -147,6 +147,260 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Стили для золотой ленты в секции истории */
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Основная золотая лента */
+.golden-timeline {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        #D4AF37 10%, 
+        #FFD700 25%, 
+        #FFF8DC 40%, 
+        #FFD700 60%, 
+        #D4AF37 75%, 
+        transparent 100%);
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.6),
+        inset 0 0 10px rgba(255, 215, 0, 0.3);
+    animation: timelineGlow 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes timelineGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(212, 175, 55, 0.6),
+            inset 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(212, 175, 55, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.4),
+            inset 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+/* Узлы на ленте */
+.timeline-node {
+    position: absolute;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #FFD700, #D4AF37);
+    border: 4px solid white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.8),
+        0 0 0 4px rgba(255, 215, 0, 0.3);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-node:hover {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 1),
+        0 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Позиционирование узлов для каждого блока */
+.history-block {
+    position: relative;
+    margin-bottom: 120px !important;
+}
+
+.history-block:nth-child(1) .timeline-node { top: 15%; }
+.history-block:nth-child(2) .timeline-node { top: 40%; }
+.history-block:nth-child(3) .timeline-node { top: 65%; }
+.history-block:nth-child(4) .timeline-node { top: 90%; }
+
+/* Коннекторы от ленты к фотографиям */
+.photo-connector {
+    position: relative;
+}
+
+.photo-connector::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #D4AF37 20%, 
+        #FFD700 50%, 
+        #D4AF37 80%, 
+        transparent 100%);
+    animation: connectorFlow 2s ease-in-out infinite;
+    z-index: 1;
+}
+
+.photo-connector.left::before {
+    right: -80px;
+}
+
+.photo-connector.right::before {
+    left: -80px;
+}
+
+@keyframes connectorFlow {
+    0%, 100% {
+        opacity: 0.7;
+        transform: scaleX(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1.1);
+    }
+}
+
+/* Золотая рамка для фотографий */
+.golden-frame {
+    position: relative;
+    padding: 6px;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.golden-frame::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.golden-frame img {
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.golden-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+.golden-frame:hover img {
+    transform: scale(1.02);
+}
+
+/* Контент истории */
+.history-content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.history-content:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .golden-timeline {
+        left: 20px;
+    }
+    
+    .timeline-node {
+        left: 20px;
+    }
+    
+    .photo-connector::before {
+        display: none;
+    }
+    
+    .history-block {
+        margin-bottom: 80px !important;
+    }
+    
+    .history-content {
+        margin-top: 20px;
+    }
+    
+    .golden-frame {
+        margin-bottom: 20px;
+    }
+}
+
+/* Анимация появления элементов при скролле */
+.history-block {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.history-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Дополнительные стили для гарантированного центрирования */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row.justify-content-center {
+    width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .col-lg-10 {
+        padding: 0 15px;
+    }
+    
+    .video-container {
+        border-radius: 10px;
+    }
+}
+
 @keyframes scroll-horizontal {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
