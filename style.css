@@ -143,6 +143,37 @@ body {
     width: max-content;
 }
 
+.gallery-track-s {
+    display: flex;
+    animation: scroll-horizontal 40s linear infinite;
+    width: max-content;
+}
+
+.gallery-track-s img {
+    height: 400px;
+    width: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-track-n {
+    display: flex;
+    animation: scroll-horizontal 400s linear infinite;
+    width: max-content;
+}
+
+.gallery-track-n img {
+    height: 400px;
+    width: auto;
+    margin-right: 15px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
 .gallery-track img {
     height: 400px;
     width: auto;
