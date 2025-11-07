@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лента новостей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylenews.css">
+
+
+</head>
+
+<body>
+
+
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    
+        <div class="container">
+            <div class="d-flex w-100">
+                <!-- Логотип и название -->
+                <a class="navbar-brand golden-text fs-2 custom-position" href="#main-content">СВЕТЛЯЧКИ</a>
+                
+                <!-- Кнопка для мобильных -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link golden-text fs-4" href="index.html">В начало</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h1 class="display-1 fw-bold golden-text" data-aos="fade-down">Актуальные события</h1>
+
+   <section id="news" class="py-5">
+
+        <h2 class="text-center mb-5 golden-text">Акутальные события</h2>
+
+        <div class="container">
+    <!-- Первый блок - фото слева, текст справа -->
+        <div class="row align-items-center mb-5 history-card">
+            <div class="col-md-6">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="news/news1.jpg" alt="Наша постановка 1" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="history-info">
+                    <h3 class="golden-text">Артисты театра стали участниками мастер-класса по танцу, который провела для них студентка второго курса АГИКа Алена Николаевна Ноздрачёва.</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Второй блок - фото справа, текст слева -->
+        <div class="row align-items-center mb-5 history-card">
+            <div class="col-md-6 order-md-2">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="news/news2.jpg" alt="Наша постановка 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="history-info">
+                    <h3 class="golden-text">Постановка танца для спектакля "Молодая гвардия".</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Третий блок - фото слева, текст справа -->
+        <div class="row align-items-center mb-5 history-card">
+            <div class="col-md-6">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="news/news3.jpg" alt="Наша постановка 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="history-info">
+                    <h3 class="golden-text">Первая репетиция спектакля «Волшебник Изумрудного города».</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row align-items-center mb-5 history-card">
+            <div class="col-md-6 order-md-2">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="news/news4.jpg" alt="Наша постановка 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="history-info">
+                    <h3 class="golden-text">Распределение ролей в спектакле "Муха-Цокотуха".</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 history-card centered-photo">
+        <div class="col-12">
+            <div class="photo-container">
+                <div class="photo-frame">
+                    <img src="news/news5.jpg" alt="Наша постановка 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+                <div class="row align-items-center mb-5 history-card">
+            <div class="col-md-6">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="news/news6.jpg" alt="Наша постановка 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="history-info">
+                    <h3 class="golden-text">Подготовка к церемонии вручения "Образцовый детский коллектив Алтайского края".</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+</section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-center py-4">
+        <p class="golden-text mb-0">&copy; Школьный театр "Светлячки" 2025</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Простой JavaScript для демонстрации функциональности
+        document.addEventListener('DOMContentLoaded', function() {
+            // Фильтрация по категориям
+            const filterBadges = document.querySelectorAll('.filter-badge');
+            filterBadges.forEach(badge => {
+                badge.addEventListener('click', function() {
+                    filterBadges.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    // Здесь будет код для фильтрации новостей
+                });
+            });
+            
+            // Кнопка "Загрузить еще"
+            const loadMoreBtn = document.querySelector('.load-more');
+            loadMoreBtn.addEventListener('click', function() {
+                // Здесь будет код для загрузки дополнительных новостей
+                alert('Функция "Загрузить больше новостей" будет реализована в бэкенде');
+            });
+        });
+    </script>
+</body>
+</html>
+

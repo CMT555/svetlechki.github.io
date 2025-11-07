@@ -1,0 +1,175 @@
+:root {
+    --dark-red: #8B0000;
+    --dark-red-gradient: linear-gradient(135deg, #6a0c0c, #8B0000);
+    --gold: #FFD700;
+    --gold-gradient: linear-gradient(135deg, #daa520, #FFD700, #ffec8b);
+    --light-gold: #FFF8DC;
+}
+
+.custom-position {
+    margin-left: -20px !important;
+}
+
+.hero-section-n {
+    background: rgba(139, 0, 0, 0.85);
+    position: relative;
+}
+
+.custom-position {
+    margin-left: -20px !important;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--dark-red-gradient);
+    color: white;
+    overflow-x: hidden;
+}
+
+.golden-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.custom-navbar {
+    background: rgba(139, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.custom-navbar-n {
+    background: rgba(88, 4, 2, 0.9) !important;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.history-card {
+    position: relative;
+    margin-bottom: 100px !important;
+}
+
+.history-card:nth-child(odd) .history-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.history-card:nth-child(even) .history-content {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+/* Стили для фотографий без ленты */
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.photo-frame {
+    position: relative;
+    padding: 8px;
+    background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+.photo-frame::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.photo-frame img {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+}
+
+.photo-frame:hover img {
+    transform: scale(1.03);
+}
+
+/* Контент истории */
+.history-info {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.history-info:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина контента */
+    margin: 0 auto;    /* Автоматические отступы слева/справа (центрирование) */
+    padding: 0 15px;   /* Защитные отступы, чтобы на маленьких экранах контент не прилипал к краям */
+}
+
+/* Стиль с фото по центру */
+.history-card.centered-photo {
+    text-align: center;
+    margin-bottom: 80px !important;
+}
+
+.history-card.centered-photo .photo-container {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+}
+
+.history-card.centered-photo .history-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.history-card.centered-photo .photo-frame {
+    display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .history-card:nth-child(odd) .history-content,
+    .history-card:nth-child(even) .history-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .history-card {
+        margin-bottom: 80px !important;
+    }
+}
